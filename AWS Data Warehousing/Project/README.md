@@ -13,7 +13,7 @@ In this project, it is to build an ETL pipeline that extracts their data from S3
 ## Major Chanllenges and Solutions
 
 * In original files, timestamp looks like 
-![original datestamp](/Capture.PNG) 
+![original datestamp](/Capture.png) 
 
 We need to transform it into the common form. 
 When I load files, I load timeformat AS 'epochmillisecs';
