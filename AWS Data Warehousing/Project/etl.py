@@ -2,8 +2,6 @@ import configparser
 import psycopg2
 from sql_queries import copy_table_queries, insert_table_queries, create_table_queries, drop_table_queries
 
-ARN = "arn:aws:iam::381910969550:role/dwhRole"
-
 def drop_tables(cur, conn):
     for query in drop_table_queries:
         cur.execute(query)
