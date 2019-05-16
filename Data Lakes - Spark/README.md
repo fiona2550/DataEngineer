@@ -27,5 +27,5 @@ Additionally, on offcial developer guidebook, it has the function of add one day
       2. There is another easy way without using UDF. 
    <b>  df.withColumn('epoch', f.date_format((df.ts/1000).cast(dataType=t.TimestampType()), "yyyy-MM-dd")) </b>  </br>
 
-## Pitfalls I Run into
+## Tricks I Run into
 * Start to run Pyspark code before Spark session starts. Except import function, all other codes should be done after session is created
