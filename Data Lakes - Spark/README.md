@@ -23,8 +23,8 @@ Additionally, on offcial developer guidebook, it has the function of add one day
 </br>
 
 * Create datetime and timestamp from unix time. 
-   <br> * UDF Function using Python datetime module as requested by this project; 
-        * There is another easy way without using UDF. </br>
+   <br> 1. UDF Function using Python datetime module as requested by this project; </br>
+   <br> 2. There is another easy way without using UDF. </br>
    <b>  df.withColumn('epoch', f.date_format((df.ts/1000).cast(dataType=t.TimestampType()), "yyyy-MM-dd")) </b>  </br>
 
 ## Tricks I Run into
