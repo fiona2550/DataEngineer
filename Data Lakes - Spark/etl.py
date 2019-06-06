@@ -27,7 +27,7 @@ def create_spark_session():
 
 def process_song_data(spark, input_data, output_data):
     # get filepath to song data file
-    song_data = "s3a://udacity-dend/song_data/*/*/*"
+    song_data = ""
     
     # read song data file
     df = spark.read.json(song_data)
@@ -47,7 +47,7 @@ def process_song_data(spark, input_data, output_data):
 
 def process_log_data(spark, input_data, output_data):
     # get filepath to log data file
-    log_data = 's3a://udacity-dend/log_data/*/*'
+    log_data = ''
 
     # read log data file
     df = spark.read.json(log_data)
@@ -87,7 +87,7 @@ def process_log_data(spark, input_data, output_data):
     time_table.write.partitionBy(['year','month']).parquet("time_table")
 
     # read in song data to use for songplays table
-    song_df = spark.read.json("s3a://udacity-dend/song_data/*/*/*")
+    song_df = spark.read.json("")
 
     # extract columns from joined song and log datasets to create songplays table 
     songplays_table = song_df.alias('a').join(df.alias('b'),(col('b.song') == col('a.title')) & (col('b.artist') == col('a.artist_name') ) )\
@@ -100,7 +100,7 @@ def process_log_data(spark, input_data, output_data):
 
 def main():
     spark = create_spark_session()
-    input_data = "s3a://udacity-dend/"
+    input_data = " "
     output_data = ""
     
     process_song_data(spark, input_data, output_data)    
