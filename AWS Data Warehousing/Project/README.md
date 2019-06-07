@@ -5,10 +5,9 @@ In this project, it is to build an ETL pipeline that extracts their data from S3
 
 
 ## File Introduction
-1.  create_tables.py This file is to drop existing tables and create those tables in need;
-2.  etl.py It is to stage and create tables of schema design;
-3.  sql_queries.py All SQL Queries that are used to create, drop, insert and staging tables;
-4.  dwh.cfg All configurayion information of the AWS Account and use this file to connect with Redshift
+1.  etl.py It is to stage and create tables of schema design;
+2.  sql_queries.py All SQL Queries that are used to create, drop, insert and staging tables;
+3.  dwh.cfg All configurayion information of the AWS Account and use this file to connect with Redshift
  
 ## Major Chanllenges and Solutions
 
